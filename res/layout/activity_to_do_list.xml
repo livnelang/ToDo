@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,21 +7,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.example.todo.ToDoList" >
-            
-    <Button android:id="@+id/submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="Start_new_Task_Activity"
-            android:text="@string/Submit"
-   />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Start_new_Task_Activity"
+        android:text="@string/Submit" />
     
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/mListView"
+        android:layout_below="@+id/submit_button"
      
    	/>
-    
-  
 
-</LinearLayout>
+    <Button
+        android:id="@+id/random_task_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/submit_button"
+        android:onClick="onRandomTaskClick"
+        android:text="Random Task" />
+
+</RelativeLayout>

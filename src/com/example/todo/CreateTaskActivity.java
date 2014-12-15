@@ -38,21 +38,22 @@ public class CreateTaskActivity extends Activity
 	
 	public void CreateTask(View v)
 	{
+		
 		System.out.print("enterd create task function !");
 		Context context = getApplicationContext();
     	CharSequence text = "entering CreateTASK()";
     	int duration = Toast.LENGTH_SHORT;
 
     	Toast toast = Toast.makeText(context, text, duration);
-    	toast.show();
+    	//toast.show();
 		
 		
 		Intent intent = new Intent(this, ToDoList.class);   // create's main activity again
 		EditText editText = (EditText) findViewById(R.id.editText1);      // gets from text field
 		String message = editText.getText().toString(); 			  	 // we have the task
 		
-		toast = Toast.makeText(context, message, duration);
-    	toast.show();
+		/*toast = Toast.makeText(context, message, duration);
+    	toast.show(); */
 		
 		
 		intent.putExtra("MESSAGE", message);      	// puts the message on the way
